@@ -1,0 +1,22 @@
+{
+	"name": "cloud_flex",
+	"version": "1.0.0",
+	"description": "```\r WHEN \r PERFORMANCE\r MATTERS\r ```",
+	"source": "index.html",
+	"scripts": {
+		"sass": "sass --style:expanded --watch styles:dist"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SergeySudarkin/cloud_flex.git"
+	},
+	"author": "Sergey Sudarkin",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/SergeySudarkin/cloud_flex/issues"
+	},
+	"homepage": "https://github.com/SergeySudarkin/cloud_flex#readme",
+	"devDependencies": {
+		"sass": "^1.71.1"
+	}
+}
