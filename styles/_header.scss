@@ -1,0 +1,80 @@
+@use "variables" as v;
+@use "placeholders";
+@use "mixins" as m;
+@use "sass:color";
+
+.header {
+	background-color: color.adjust(v.$color_white, $alpha: -0.9);
+	border-bottom: 1px solid v.$color_white;
+	&__wrapper {
+		height: 52px;
+		@include m.d-flex(start, center);
+		.title {
+			height: 100%;
+			font-weight: 500;
+			font-size: 25px;
+			text-transform: uppercase;
+			padding: 0 50px;
+			border-right: 1px solid v.$color_white;
+			@include m.d-flex(center, center);
+			&__link {
+				color: v.$color_white;
+				@extend %hover-black;
+			}
+			span {
+				font-weight: 700;
+			}
+
+			@media (max-width: v.$media_992) {
+				padding: 0 40px;
+			}
+		}
+		.nav {
+			flex-grow: 1;
+			&__list {
+				height: 100%;
+				padding: 0 30px 0 110px;
+				@include m.d-flex(start, center, nowrap, min(5vw, 95px));
+
+				@media (max-width: v.$media_992) {
+					padding: 0 20px;
+					@include m.d-flex(center, center, nowrap, min(5vw, 95px));
+				}
+			}
+			&__item {
+				font-size: 22px;
+				&-link {
+					color: v.$color_white;
+					flex-grow: 1;
+					@extend %hover-black;
+				}
+			}
+		}
+		.covid {
+			height: 100%;
+			font-weight: 700;
+			text-transform: uppercase;
+			padding: 0 30px;
+			border-left: 1px solid v.$color_white;
+			border-right: 1px solid v.$color_white;
+			@include m.d-flex(center, center);
+			&__link {
+				color: v.$color_white;
+				@extend %hover-black;
+			}
+		}
+		.globe {
+			height: 100%;
+			padding: 0 30px;
+			@include m.d-flex(center, center);
+			&__link {
+				&-icon {
+					width: 27px;
+					height: 29px;
+					fill: v.$color_white;
+					@extend %hover-black-icon;
+				}
+			}
+		}
+	}
+}
