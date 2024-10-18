@@ -22,7 +22,7 @@
 	&:hover {
 		cursor: pointer;
 		color: v.$color_white;
-		background-color: color.adjust(v.$color_blue, $alpha: -0.5);
+		background-color: color.adjust(v.$color_white, $alpha: -0.7);
 		transition: all 0.3s;
 	}
 }
