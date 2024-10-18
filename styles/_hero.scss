@@ -1,0 +1,98 @@
+@use "variables" as v;
+@use "placeholders";
+@use "mixins" as m;
+@use "sass:color";
+
+.hero {
+	&__wrapper {
+		background: url(../assets/img/cloud_alpha.png) center/contain no-repeat;
+		margin: 150px 0 0 0;
+		position: relative;
+		.content {
+			position: relative;
+			width: 100%;
+			max-width: 930px;
+			height: 480px;
+			margin: 0 auto;
+			&__title {
+				@include m.font(120px, 700, v.$color_black);
+				line-height: 1;
+				text-transform: uppercase;
+			}
+			&__btn {
+				@include m.font(28px, 500, v.$color_white);
+				width: 380px;
+				height: 80px;
+				background-color: v.$color_black;
+				border: none;
+				outline: none;
+				border-radius: 40px;
+				position: absolute;
+				right: 0;
+				bottom: 140px;
+
+				@extend %hover-white;
+				&:focus-visible {
+					outline: 2px solid v.$color_white;
+				}
+			}
+		}
+		.cookie {
+			position: relative;
+			max-width: 680px;
+			height: 70px;
+			margin: 45px auto 0;
+			background-color: color.adjust(v.$color_white, $alpha: -0.9);
+			border-radius: 20px;
+			@include m.d-flex(end, center, wrap, 18px);
+			&__pigeon {
+				width: 126px;
+				height: 198px;
+				object-fit: contain;
+				position: absolute;
+				left: -40px;
+				top: -70px;
+			}
+			&__desc {
+				@include m.font(14px, 400, v.$color_black);
+				padding: 0 0 0 10px;
+				max-width: 462px;
+				line-height: 1;
+			}
+			&__btn {
+				@include m.font(25px, 400, v.$color_black);
+				outline: none;
+				border: none;
+				border-top-right-radius: 20px;
+				border-bottom-right-radius: 20px;
+				text-transform: uppercase;
+				padding: 6px;
+				background-color: transparent;
+				height: 100%;
+				border-left: 1px solid color.adjust(v.$color_white, $alpha: -0.5);
+
+				@extend %hover-blue;
+				&:focus-visible {
+					outline: 2px solid v.$color_white;
+				}
+			}
+		}
+		.scroll {
+			position: absolute;
+			top: 430px;
+			left: 0;
+			&__down {
+				@include m.d-flex(center, center, nowrap, 15px);
+				@include m.font(16px, 500, v.$color_white);
+				writing-mode: vertical-lr;
+
+				&::after {
+					content: "";
+					width: 1px;
+					height: 75px;
+					background-color: v.$color_white;
+				}
+			}
+		}
+	}
+}

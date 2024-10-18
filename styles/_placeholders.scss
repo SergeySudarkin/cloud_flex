@@ -1,10 +1,29 @@
 @use "variables" as v;
+@use "sass:color";
 
 %hover-black {
 	&:hover {
 		cursor: pointer;
 		color: v.$color_black;
 		transition: color 0.3s;
+	}
+}
+
+%hover-white {
+	&:hover {
+		cursor: pointer;
+		color: v.$color_black;
+		background-color: v.$color_white;
+		transition: all 0.3s;
+	}
+}
+
+%hover-blue {
+	&:hover {
+		cursor: pointer;
+		color: v.$color_white;
+		background-color: color.adjust(v.$color_blue, $alpha: -0.5);
+		transition: all 0.3s;
 	}
 }
 
