@@ -4,7 +4,7 @@
 @use "sass:color";
 
 .hero {
-	margin: 150px 0 60px 0;
+	margin: 150px 0 120px 0;
 	&__wrapper {
 		background: url(../assets/img/cloud_alpha.png) center/contain no-repeat;
 		position: relative;
@@ -235,12 +235,12 @@
 
 	@media (max-width: v.$media_992) {
 		& {
-			margin: 100px 0 40px 0;
+			margin: 100px 0 80px 0;
 		}
 	}
 	@media (max-width: v.$media_576) {
 		& {
-			margin: 50px 0 25px 0;
+			margin: 50px 0 50px 0;
 		}
 	}
 }
