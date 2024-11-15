@@ -1,0 +1,97 @@
+@use "variables" as v;
+@use "placeholders";
+@use "mixins" as m;
+@use "sass:color";
+
+.experience {
+	margin: 200px 0 210px 0;
+
+	&__wrapper {
+		text-align: center;
+	}
+
+	&__title {
+		@include m.font(60px, 400, v.$color_white);
+		margin-bottom: 100px;
+	}
+
+	&__cards {
+		@include m.d-flex(space-evenly, center, wrap, 25px, 50px, row);
+	}
+
+	&__card {
+		max-width: 320px;
+		height: 300px;
+		background-color: color.adjust(v.$color_white, $alpha: -0.9);
+		border-radius: 20px;
+		overflow: hidden;
+		position: relative;
+		@include m.d-flex(space-between, center, nowrap, 0, 0, column);
+		transition: all 0.2s;
+
+		&:hover {
+			box-shadow:
+				0 20px 30px 0 color.adjust(v.$color_black, $alpha: -0.7),
+				0 20px 30px 60px color.adjust(v.$color_black, $alpha: -0.7) inset;
+		}
+
+		&-title {
+			@include m.font(23px, 400, v.$color_white);
+			padding: 10px;
+			margin: auto;
+		}
+
+		&-img {
+			width: 100%;
+			object-fit: contain;
+		}
+
+		&-link {
+			cursor: pointer;
+			position: absolute;
+			width: 165px;
+			height: 95px;
+			border-radius: 20px;
+			background-color: v.$color_white;
+			left: -80px;
+			bottom: -25px;
+			rotate: z 9deg;
+			transition: all 0.2s;
+		}
+
+		&-link:hover {
+			scale: 1.5;
+		}
+
+		&-link:hover &-icon {
+			top: 20px;
+		}
+
+		&-icon {
+			width: 36px;
+			height: 23px;
+			fill: v.$color_black;
+			rotate: z -9deg;
+			position: absolute;
+			top: 25px;
+			right: 25px;
+		}
+	}
+
+	@media (max-width: v.$media_768) {
+		margin: 150px 0 150px 0;
+
+		&__title {
+			margin-bottom: 80px;
+		}
+	}
+
+	@media (max-width: v.$media_576) {
+		margin: 100px 0 100px 0;
+
+		&__title {
+			@include m.font(35px, 400, v.$color_white);
+			margin-bottom: 70px;
+		}
+	}
+}
