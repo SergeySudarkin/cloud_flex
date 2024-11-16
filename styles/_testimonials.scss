@@ -93,6 +93,7 @@
 			rotate: z 135deg;
 			translate: 0 -50%;
 			border: none;
+			transition: box-shadow 0.3s;
 
 			&:hover {
 				box-shadow:
@@ -162,6 +163,9 @@
 				height: 15px;
 				border-radius: 50%;
 				background-color: v.$color_white;
+				transition:
+					scale 0.3s,
+					background-color 0.3s;
 			}
 
 			&-item:hover {

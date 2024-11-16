@@ -932,7 +932,7 @@ body {
   column-gap: 0;
   row-gap: 0;
   flex-direction: column;
-  transition: all 0.2s;
+  transition: box-shadow 0.2s;
 }
 .experience__card:hover {
   box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.3), 0 20px 30px 60px rgba(0, 0, 0, 0.3) inset;
@@ -958,7 +958,7 @@ body {
   left: -80px;
   bottom: -25px;
   rotate: z 9deg;
-  transition: all 0.2s;
+  transition: scale 0.2s;
 }
 .experience__card-link:hover {
   scale: 1.5;
@@ -1098,6 +1098,7 @@ body {
   rotate: z 135deg;
   translate: 0 -50%;
   border: none;
+  transition: box-shadow 0.3s;
 }
 .testimonials .slider__btn-left:hover, .testimonials .slider__btn-right:hover {
   box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.15), 0 0 15px 3px rgba(0, 0, 0, 0.15) inset;
@@ -1160,6 +1161,7 @@ body {
   height: 15px;
   border-radius: 50%;
   background-color: #fff;
+  transition: scale 0.3s, background-color 0.3s;
 }
 .testimonials .slider__points-item:hover {
   scale: 0.75;
