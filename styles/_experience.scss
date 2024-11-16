@@ -27,7 +27,7 @@
 		overflow: hidden;
 		position: relative;
 		@include m.d-flex(space-between, center, nowrap, 0, 0, column);
-		transition: all 0.2s;
+		transition: box-shadow 0.2s;
 
 		&:hover {
 			box-shadow:
@@ -56,7 +56,7 @@
 			left: -80px;
 			bottom: -25px;
 			rotate: z 9deg;
-			transition: all 0.2s;
+			transition: scale 0.2s;
 		}
 
 		&-link:hover {

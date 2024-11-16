@@ -6,6 +6,10 @@
 .about {
 	margin: 145px 0 0 0;
 
+	.container {
+		overflow: hidden;
+	}
+
 	&__wrapper {
 		@include m.d-flex(start, center, nowrap, 0, 200px, column);
 
