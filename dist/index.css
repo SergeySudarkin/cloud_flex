@@ -1172,4 +1172,101 @@ body {
   background-color: #b4b4b4;
 }
 
+.contact {
+  padding: 150px 0 200px 0;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 992px) {
+  .contact {
+    padding: 150px 0 150px 0;
+  }
+}
+.contact__form {
+  max-width: 625px;
+  margin: 0 auto;
+}
+.contact__form-title {
+  display: block;
+  font-size: 36px;
+  font-weight: 400;
+  color: #000;
+  margin: 0 auto 35px auto;
+  text-align: center;
+}
+.contact__form-input {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  padding: 10px 25px;
+  font-size: 25px;
+  font-weight: 300;
+  color: #000;
+  margin-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .contact__form-title {
+    font-size: 32px;
+    font-weight: 400;
+    color: #000;
+    margin: 0 auto 25px auto;
+  }
+  .contact__form-input {
+    font-size: 18px;
+    font-weight: 300;
+    color: #000;
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 576px) {
+  .contact__form-title {
+    max-width: 350px;
+  }
+}
+.contact__form-submit {
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 20px;
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
+  padding: 10px 25px;
+  background-color: #000;
+}
+.contact__form-submit:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: background-color 0.3s;
+}
+.contact__cloud {
+  background: url(../assets/img/cloud_alpha.png) center/contain no-repeat;
+  width: 700px;
+  height: 250px;
+  position: absolute;
+  z-index: -1;
+}
+.contact .cloud--left {
+  top: 0;
+  left: -340px;
+}
+.contact .cloud--right {
+  bottom: 50px;
+  right: -470px;
+}
+@media (max-width: 992px) {
+  .contact__cloud {
+    width: 440px;
+    height: 160px;
+  }
+  .contact .cloud--left {
+    left: -280px;
+  }
+  .contact .cloud--right {
+    width: 290px;
+    height: 100px;
+    bottom: 30px;
+    right: -165px;
+  }
+}
+
 /*# sourceMappingURL=index.css.map */
