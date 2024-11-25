@@ -1,0 +1,107 @@
+@use "variables" as v;
+@use "placeholders";
+@use "mixins" as m;
+@use "sass:color";
+
+.contact {
+	padding: 150px 0 200px 0;
+	position: relative;
+	overflow: hidden;
+
+	@media (max-width: v.$media_992) {
+		padding: 150px 0 150px 0;
+	}
+
+	&__wrapper {
+	}
+
+	&__form {
+		max-width: 625px;
+		margin: 0 auto;
+
+		&-title {
+			display: block;
+			@include m.font(36px, 400, v.$color_black);
+			margin: 0 auto 35px auto;
+			text-align: center;
+		}
+
+		&-input {
+			width: 100%;
+			border: 1px solid color.adjust(v.$color_black, $alpha: -0.5);
+			border-radius: 20px;
+			padding: 10px 25px;
+			@include m.font(25px, 300, v.$color_black);
+			margin-bottom: 30px;
+		}
+
+		@media (max-width: v.$media_768) {
+			&-title {
+				@include m.font(32px, 400, v.$color_black);
+				margin: 0 auto 25px auto;
+			}
+
+			&-input {
+				@include m.font(18px, 300, v.$color_black);
+				margin-bottom: 25px;
+			}
+		}
+
+		@media (max-width: v.$media_576) {
+			&-title {
+				max-width: 350px;
+			}
+		}
+
+		&-submit {
+			width: 100%;
+			border: 1px solid v.$color_black;
+			border-radius: 20px;
+			@include m.font(25px, 500, v.$color_white);
+			padding: 10px 25px;
+			background-color: v.$color_black;
+
+			&:hover {
+				cursor: pointer;
+				background-color: color.adjust(v.$color_black, $alpha: -0.4);
+				transition: background-color 0.3s;
+			}
+		}
+	}
+
+	&__cloud {
+		background: url(../assets/img/cloud_alpha.png) center/contain no-repeat;
+		width: 700px;
+		height: 250px;
+		position: absolute;
+		z-index: -1;
+	}
+
+	.cloud--left {
+		top: 0;
+		left: -340px;
+	}
+
+	.cloud--right {
+		bottom: 50px;
+		right: -470px;
+	}
+
+	@media (max-width: v.$media_992) {
+		&__cloud {
+			width: 440px;
+			height: 160px;
+		}
+
+		.cloud--left {
+			left: -280px;
+		}
+
+		.cloud--right {
+			width: 290px;
+			height: 100px;
+			bottom: 30px;
+			right: -165px;
+		}
+	}
+}
