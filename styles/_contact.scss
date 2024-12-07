@@ -33,6 +33,7 @@
 			padding: 10px 25px;
 			@include m.font(25px, 300, v.$color_black);
 			margin-bottom: 30px;
+			cursor: pointer;
 		}
 
 		@media (max-width: v.$media_768) {
