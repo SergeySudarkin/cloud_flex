@@ -1,0 +1,66 @@
+@use "variables" as v;
+@use "placeholders";
+@use "mixins" as m;
+@use "sass:color";
+
+.footer {
+	padding: 40px 0 30px 0;
+	background-color: color.adjust(v.$color_white, $alpha: -0.85);
+	box-shadow: 0 4px 20px 0 color.adjust(v.$color_black, $alpha: -0.9);
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 15px;
+
+		.footer__address {
+			font-style: normal;
+
+			&-link {
+				font-size: 20px;
+				color: v.$color_white;
+
+				@extend %hover-black;
+			}
+
+			&-link:not(:first-child) {
+				margin-left: 35px;
+			}
+
+			&-copyright {
+				font-weight: 300;
+				font-size: 14px;
+				color: v.$color_white;
+				margin-top: 10px;
+			}
+		}
+
+		.footer__socials {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 45px;
+
+			&-link {
+			}
+
+			&-logo {
+				width: 25px;
+				height: 24px;
+				fill: v.$color_white;
+
+				@extend %hover-black-icon;
+			}
+		}
+	}
+
+	@media (max-width: v.$media_576) {
+		padding: 25px 0;
+
+		&__wrapper {
+			flex-direction: column-reverse;
+		}
+	}
+}
