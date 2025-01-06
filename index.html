@@ -21,10 +21,10 @@
 				<nav class="header__nav nav" aria-label="header navigation">
 					<ul class="nav__list" aria-label="navigation list">
 						<li class="nav__item" aria-label="navigation item">
-							<a class="nav__item-link" href="#" aria-label="link to about us">about us</a>
+							<a class="nav__item-link" href="#about-id" aria-label="link to about us">about us</a>
 						</li>
 						<li class="nav__item" aria-label="navigation item">
-							<a class="nav__item-link" href="#" aria-label="link to contact">contact</a>
+							<a class="nav__item-link" href="#contact-id" aria-label="link to contact">contact</a>
 						</li>
 					</ul>
 				</nav>
@@ -38,9 +38,47 @@
 						</svg>
 					</a>
 				</div>
+				<div class="mob-nav__menu">
+					<label class="mob-nav__burger" for="togglerId" aria-label="mobile navigation burger">
+						<svg class="mob-nav__icon" aria-label="burger icon">
+							<use href="assets/sprites.svg#burger-icon"></use>
+						</svg>
+					</label>
+				</div>
 			</div>
 		</div>
 	</header>
+	<input class="mob-nav__toggler" type="checkbox" name="toggler" id="togglerId">
+	<div class="mob-nav" aria-label="mobile navigation">
+		<div class="container">
+			<nav class="mob-nav__nav nav" aria-label="mobile navigation menu">
+				<ul class="nav__list" aria-label="mobile navigation list">
+					<li class="nav__item" aria-label="mobile navigation item">
+						<a class="nav__item-link" href="#work-id" aria-label="link to work">Work</a>
+					</li>
+					<li class="nav__item" aria-label="navigation item">
+						<a class="nav__item-link" href="#about-id" aria-label="link to about">About</a>
+					</li>
+					<li class="nav__item" aria-label="mobile navigation item">
+						<a class="nav__item-link" href="#experience-id" aria-label="link to experience">Experience</a>
+					</li>
+					<li class="nav__item" aria-label="navigation item">
+						<a class="nav__item-link" href="#testimonials-id" aria-label="link to testimonials">Testimonials</a>
+					</li>
+					<li class="nav__item" aria-label="navigation item">
+						<a class="nav__item-link" href="#contact-id" aria-label="link to contact">Contact</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="mob-nav__menu">
+				<label class="mob-nav__cross" for="togglerId" aria-label="mobile navigation cross">
+					<svg class="mob-nav__icon" aria-label="cross icon">
+						<use href="assets/sprites.svg#cross-icon"></use>
+					</svg>
+				</label>
+			</div>
+		</div>
+	</div>
 	<main>
 		<section class="hero" aria-label="hero section">
 			<div class="container">
@@ -63,7 +101,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="work" aria-label="work section">
+		<section class="work" id="work-id" aria-label="work section">
 			<div class="container">
 				<div class="work__wrapper">
 					<h2 class="work__title" aria-label="work title">How we work</h2>
@@ -121,7 +159,7 @@
 			</div>
 		</section>
 		<hr class="divider">
-		<section class="about" aria-label="about section">
+		<section class="about" id="about-id" aria-label="about section">
 			<div class="container">
 				<div class="about__wrapper">
 					<div class="about__quality quality" aria-label="quality">
@@ -146,7 +184,7 @@
 			</div>
 		</section>
 		<hr class="divider">
-		<section class="experience" aria-label="experience section">
+		<section class="experience" id="experience-id" aria-label="experience section">
 			<div class="container">
 				<div class="experience__wrapper">
 					<h2 class="experience__title" aria-label="experience title">Our experience </h2>
@@ -183,7 +221,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="testimonials" aria-label="testimonials section">
+		<section class="testimonials" id="testimonials-id" aria-label="testimonials section">
 			<div class="container">
 				<div class="testimonials__wrapper">
 					<h2 class="testimonials__title" aria-label="testimonials title">Testimonials</h2>
@@ -216,7 +254,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="contact" aria-label="contact section">
+		<section class="contact" id="contact-id" aria-label="contact section">
 			<div class="container">
 				<div class="contact__wrapper">
 					<form class="contact__form" action="mailto:test@mail.ru" aria-labelledby="contact form">
